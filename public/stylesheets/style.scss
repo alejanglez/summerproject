@@ -26,6 +26,7 @@ body {
   color: $text;
   line-height: 2;
   background: #f3f3f3;
+  padding-bottom: 12rem;
 
   strong {
     font-weight: 700;
@@ -52,6 +53,17 @@ h1 {
   strong {
     font-size: 6rem;
   }
+
+  &.title {
+    border-bottom: solid 0.1rem $text;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 8rem;
+  }
+
+  &.form {
+    margin-bottom: 6rem;
+  }
 }
 
 .navbar {
@@ -62,6 +74,16 @@ h1 {
   z-index: 1;
   background: rgba($white, 0.9);
   width: 100%;
+
+  .navbar-brand {
+    font-size: 3rem;
+    font-weight: 300;
+
+    .bi {
+      margin: 0 1rem 0 3rem;
+      font-size: 4rem;
+    }
+  }
 
   .navbar-nav {
     flex-direction: row;
@@ -99,6 +121,7 @@ h1 {
       display: flex;
       align-items: center;
       margin-right: 2rem;
+      justify-content: end;
 
       .nav-avatar {
         border-radius: 50%;
@@ -168,33 +191,102 @@ h1 {
       background: transparent;
     }
   }
+}
 
-  .banner-deg {
-    height: 80rem;
-    background: url(../images/banner-bg.jpg) no-repeat center top / cover;
-    position: absolute;
-    width: 85rem;
-    top: 0;
-    right: 0;
-    mask-image: url(../images/mask.svg);
-    mask-size: 85rem;
-    mask-repeat: no-repeat;
-    mask-position: top;
-    z-index: 0;
+.home-avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.user-data {
+  display: flex;
+  margin-bottom: 6rem;
+
+  .home-avatar {
+    margin-right: 1rem;
+  }
+}
+
+.banner-deg {
+  height: 80rem;
+  background: url(../images/banner-bg.jpg) no-repeat center top / cover;
+  position: absolute;
+  width: 85rem;
+  top: 0;
+  right: 0;
+  mask-image: url(../images/mask.svg);
+  mask-size: 85rem;
+  mask-repeat: no-repeat;
+  mask-position: top;
+  z-index: 0;
+}
+
+a {
+  color: $primary-blue;
+  font-weight: 700;
+  font-size: 1.4rem;
+
+  .bi {
+    font-size: 1.6rem;
+    margin-left: 0.5rem;
+    font-weight: 700;
+  }
+
+  &:hover {
+    color: $primary-blue;
+    text-decoration: none;
   }
 }
 
 .content {
+  margin-top: 10rem;
+  position: relative;
+
+  .profile {
+    display: flex;
+    align-items: center;
+
+    .user-avatar {
+      margin-right: 2rem;
+    }
+  }
+
+  .social-btn {
+    a {
+      font-size: 1.6rem;
+      display: block;
+      width: 100%;
+      background-color: rgba($primary-blue, 0.2);
+      border: 0;
+      padding: 1rem;
+      color: $primary-blue;
+      transition: all 200ms ease-in-out;
+
+      &:hover {
+        background-color: $primary-blue;
+        color: $white;
+      }
+    }
+  }
+
+  .form-btn {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .desc {
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-top: 6rem;
+  }
+
   .user-avatar {
     width: 12rem;
     height: 12rem;
     border: solid 0.3rem $white;
     background: $white;
     border-radius: 50%;
-    position: absolute;
-    left: 50%;
-    margin-left: -6rem;
-    top: -8rem;
   }
 
   .card {
@@ -202,6 +294,10 @@ h1 {
     border-radius: 1.6rem;
     border: 0;
     padding: 2rem;
+
+    button {
+      margin: 0;
+    }
 
     .card-header {
       padding: 0;
@@ -229,12 +325,6 @@ h1 {
 
       .comment-block {
         display: -webkit-box;
-
-        .home-avatar {
-          width: 3rem;
-          height: 3rem;
-          border-radius: 50%;
-        }
 
         .comment-info {
           margin-left: 1rem;
@@ -273,7 +363,6 @@ h1 {
         border: 0;
         background: transparent;
         padding: 0;
-        margin-bottom: 1rem;
         outline: none;
         font-size: 1.4rem;
         color: $primary-blue;
@@ -282,12 +371,79 @@ h1 {
     }
   }
 
+  textarea {
+    font-size: 1.4rem;
+  }
+
+  input {
+    padding: 2rem 1rem;
+    font-size: 1.4rem;
+  }
+
+  label {
+    font-weight: 700;
+  }
+
+  button {
+    background: $secondary-blue;
+    color: $white;
+    font-size: 1.6rem;
+    padding: 1rem 4rem;
+    margin-top: 3rem;
+    border: 0;
+    transition: all 100ms ease-in-out;
+    border: solid 0.1rem $secondary-blue;
+    outline: none;
+
+    &:hover {
+      background: transparent;
+      color: $secondary-blue;
+    }
+  }
+
+  .edit-row {
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+
+    button {
+      margin: 0;
+    }
+
+    a {
+      margin-left: 3rem;
+    }
+  }
+
   .post-bg {
     background: url(../images/post-bg.jpg) no-repeat center center / cover;
     height: calc(100vh - 6.8rem);
   }
 
-  form {
+  .users-comments {
+    .post-info {
+      .user-data {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.modal {
+  background: rgba($white, 0.9);
+
+  .modal-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: 'Merriweather', serif;
+  }
+
+  .modal-body {
+    padding: 3rem;
+    textarea {
+      font-size: 1.4rem;
+    }
+
     input {
       padding: 2rem 1rem;
       font-size: 1.4rem;
@@ -303,10 +459,13 @@ h1 {
       font-size: 1.6rem;
       padding: 1rem 4rem;
       margin-top: 3rem;
-      box-shadow: 0 0 1rem 0 rgba($text, 0.3);
+      border: 0;
+      transition: all 100ms ease-in-out;
+      border: solid 0.1rem $secondary-blue;
+      outline: none;
 
       &:hover {
-        background: $white;
+        background: transparent;
         color: $secondary-blue;
       }
     }

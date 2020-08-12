@@ -15,6 +15,7 @@ body {
   color: #333;
   line-height: 2;
   background: #f3f3f3;
+  padding-bottom: 12rem;
 }
 
 body strong {
@@ -48,6 +49,17 @@ h1 strong {
   font-size: 6rem;
 }
 
+h1.title {
+  border-bottom: solid 0.1rem #333;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 8rem;
+}
+
+h1.form {
+  margin-bottom: 6rem;
+}
+
 .navbar {
   padding: 0;
   position: fixed;
@@ -56,6 +68,16 @@ h1 strong {
   z-index: 1;
   background: rgba(255, 255, 255, 0.9);
   width: 100%;
+}
+
+.navbar .navbar-brand {
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.navbar .navbar-brand .bi {
+  margin: 0 1rem 0 3rem;
+  font-size: 4rem;
 }
 
 .navbar .navbar-nav {
@@ -104,6 +126,9 @@ h1 strong {
       -ms-flex-align: center;
           align-items: center;
   margin-right: 2rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
 }
 
 .navbar .navbar-nav .user-info .nav-avatar {
@@ -184,7 +209,24 @@ h1 strong {
   background: transparent;
 }
 
-.banner-bg .banner-deg {
+.home-avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.user-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 6rem;
+}
+
+.user-data .home-avatar {
+  margin-right: 1rem;
+}
+
+.banner-deg {
   height: 80rem;
   background: url(../images/banner-bg.jpg) no-repeat center top/cover;
   position: absolute;
@@ -202,16 +244,75 @@ h1 strong {
   z-index: 0;
 }
 
+a {
+  color: #04adbf;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+a .bi {
+  font-size: 1.6rem;
+  margin-left: 0.5rem;
+  font-weight: 700;
+}
+
+a:hover {
+  color: #04adbf;
+  text-decoration: none;
+}
+
+.content {
+  margin-top: 10rem;
+  position: relative;
+}
+
+.content .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content .profile .user-avatar {
+  margin-right: 2rem;
+}
+
+.content .social-btn a {
+  font-size: 1.6rem;
+  display: block;
+  width: 100%;
+  background-color: rgba(4, 173, 191, 0.2);
+  border: 0;
+  padding: 1rem;
+  color: #04adbf;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.content .social-btn a:hover {
+  background-color: #04adbf;
+  color: #fff;
+}
+
+.content .form-btn {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.content .desc {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-top: 6rem;
+}
+
 .content .user-avatar {
   width: 12rem;
   height: 12rem;
   border: solid 0.3rem #fff;
   background: #fff;
   border-radius: 50%;
-  position: absolute;
-  left: 50%;
-  margin-left: -6rem;
-  top: -8rem;
 }
 
 .content .card {
@@ -219,6 +320,10 @@ h1 strong {
   border-radius: 1.6rem;
   border: 0;
   padding: 2rem;
+}
+
+.content .card button {
+  margin: 0;
 }
 
 .content .card .card-header {
@@ -252,12 +357,6 @@ h1 strong {
 
 .content .card .card-body .comment-block {
   display: -webkit-box;
-}
-
-.content .card .card-body .comment-block .home-avatar {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
 }
 
 .content .card .card-body .comment-block .comment-info {
@@ -300,11 +399,59 @@ h1 strong {
   border: 0;
   background: transparent;
   padding: 0;
-  margin-bottom: 1rem;
   outline: none;
   font-size: 1.4rem;
   color: #04adbf;
   font-weight: 700;
+}
+
+.content textarea {
+  font-size: 1.4rem;
+}
+
+.content input {
+  padding: 2rem 1rem;
+  font-size: 1.4rem;
+}
+
+.content label {
+  font-weight: 700;
+}
+
+.content button {
+  background: #04bfbf;
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 1rem 4rem;
+  margin-top: 3rem;
+  border: 0;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+  border: solid 0.1rem #04bfbf;
+  outline: none;
+}
+
+.content button:hover {
+  background: transparent;
+  color: #04bfbf;
+}
+
+.content .edit-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3rem;
+}
+
+.content .edit-row button {
+  margin: 0;
+}
+
+.content .edit-row a {
+  margin-left: 3rem;
 }
 
 .content .post-bg {
@@ -312,27 +459,52 @@ h1 strong {
   height: calc(100vh - 6.8rem);
 }
 
-.content form input {
+.content .users-comments .post-info .user-data {
+  margin-bottom: 0;
+}
+
+.modal {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.modal .modal-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: 'Merriweather', serif;
+}
+
+.modal .modal-body {
+  padding: 3rem;
+}
+
+.modal .modal-body textarea {
+  font-size: 1.4rem;
+}
+
+.modal .modal-body input {
   padding: 2rem 1rem;
   font-size: 1.4rem;
 }
 
-.content form label {
+.modal .modal-body label {
   font-weight: 700;
 }
 
-.content form button {
+.modal .modal-body button {
   background: #04bfbf;
   color: #fff;
   font-size: 1.6rem;
   padding: 1rem 4rem;
   margin-top: 3rem;
-  -webkit-box-shadow: 0 0 1rem 0 rgba(51, 51, 51, 0.3);
-          box-shadow: 0 0 1rem 0 rgba(51, 51, 51, 0.3);
+  border: 0;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+  border: solid 0.1rem #04bfbf;
+  outline: none;
 }
 
-.content form button:hover {
-  background: #fff;
+.modal .modal-body button:hover {
+  background: transparent;
   color: #04bfbf;
 }
 /*# sourceMappingURL=style.css.map */

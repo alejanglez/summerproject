@@ -1,12 +1,14 @@
+<div class="banner-deg" style="background: url(/images/profile.jpg) no-repeat center center / cover;"></div>
 <div class="container-fluid content">
   <div class="container">
     <div class="row">
-      <div class="col-12">
-        <div class="user-avatar" style="background: #65c9ff url({{user.avatar}}) no-repeat center center / cover;">
-        </div>
-        <p>logged user: {{userId}}</p>
-        <p>@{{user.username}}</p>
-        <h1>Perfil de {{user.name}}</h1>
+      <div class="col-12 col-sm-8">
+        <h1 class="title profile">
+          <div class="user-avatar" style="background: #65c9ff url({{user.avatar}}) no-repeat center center / cover;">
+          </div> {{user.name}}
+        </h1>
+
+
         <form action="/user-profile/{{user._id}}/edit" method="POST" enctype="multipart/form-data">
           <div class="form-group">
             <label for="name">Name</label>
@@ -68,12 +70,14 @@
             </div>
             {{/if}}
           </div>
-          <button type="submit" class="btn btn-primary">
-            Update profile
-          </button>
-          <button type="button" class="btn bbtn-text" data-toggle="modal" data-target="#delete">
-            Delete profile
-          </button>
+          <div class="edit-row">
+            <button type="submit" class="btn btn-primary">
+              Update profile
+            </button>
+            <a href="#" class="btn-text" data-toggle="modal" data-target="#delete">
+              Delete profile
+            </a>
+          </div>
         </form>
 
         <!-- Modal -->

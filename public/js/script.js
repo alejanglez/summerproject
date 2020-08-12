@@ -8,9 +8,7 @@ document.addEventListener(
 
 function like(e) {
   const button = e.currentTarget
-  const likes =
-    `https://ironsummer.herokuapp.com/${button.id}/like` ||
-    `http://localhost:3000/${button.id}/like`
+  const likes = `/${button.id}/like`
 
   // const user = session.currentUser
 

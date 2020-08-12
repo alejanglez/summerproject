@@ -1,5 +1,5 @@
-const usersJson = process.env.USERS || 'http://localhost:3000/admin/users'
-const projectsJson = process.env.PROJECTS || 'http://localhost:3000/admin/projects'
+const usersJson = '/admin/users'
+const projectsJson = '/admin/projects'
 const nameFilter = document.querySelector('.name-filter')
 const projnameFilter = document.querySelector('.projname-filter')
 const usersColumn = document.querySelector('#users')

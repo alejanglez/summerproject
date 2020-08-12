@@ -1,5 +1,5 @@
-const usersJson = process.env.USERS || 'http://localhost:3000/admin/users'
-const projectsJson = process.env.PROJECTS || 'http://localhost:3000/admin/projects'
+const usersJson = 'http://localhost:3000/admin/users'
+const projectsJson = 'http://localhost:3000/admin/projects'
 const nameFilter = document.querySelector('.name-filter')
 const projnameFilter = document.querySelector('.projname-filter')
 const usersColumn = document.querySelector('#users')
@@ -81,7 +81,7 @@ axios
   .get(usersJson)
   .then((responseFromAPI) => {
     console.log(responseFromAPI.data)
-    
+
     let dates = []
     let numberOfUsers = []
     responseFromAPI.data.forEach((el) => {
@@ -93,10 +93,8 @@ axios
     }, {})
     numberOfUsers = Object.values(numberOfDates)
 
-
     console.log(dates)
     console.log(numberOfUsers)
-
 
     new Chart(document.getElementById('my-chart'), {
       type: 'line',

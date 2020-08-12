@@ -8,12 +8,11 @@ document.addEventListener(
 
 function like(e) {
   const button = e.currentTarget
-  const like = process.env.LIKES || `http://localhost:3000/${button.id}/like`
 
   // const user = session.currentUser
 
   axios
-    .post(like)
+    .post(`http://localhost:3000/${button.id}/like`)
     .then((res) => {
       const add = res.data.like
       button.querySelector('.likes-count').innerText =

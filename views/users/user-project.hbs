@@ -1,0 +1,31 @@
+<div class="container-fluid content">
+  <div class="row">
+    <div class="col-12 col-sm-4 post-bg"></div>
+    <div class="col-12 col-sm-3">
+      <form action="/project/{{user._id}}/new" method="POST" enctype="multipart/form-data">
+        <h2><strong>Upload a project!</strong></h2>
+        <div class="form-group">
+          <label for="name">Project name</label>
+          <input type="text" class="form-control" id="name" name="name">
+        </div>
+        <div class="form-group">
+          <label for="content">Content</label>
+          <textarea type="text" class="form-control" id="content" name="content" rows="5"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="picPath">Upload file</label>
+          <input type="file" class="form-control-file" id="picPath" placeholder="Upload file" name="picPath">
+        </div>
+        <div class="form-group">
+          <label for="picName">Files title</label>
+          <input type="text" class="form-control" id="picName" placeholder="File title" name="picName">
+        </div>
+        <div class="form-group">
+          <label for="url">Project Url</label>
+          <input type="text" class="form-control" id="url" placeholder="File title" name="url">
+        </div>
+        <button type="submit" class="btn" id="{{user._id}}">Create post</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<h1>CUENTA CONFIRMADA</h1>
+{{#if message}}
+<p>{{message}}</p>
+<a href="/login">login here</a>
+{{/if}}
+
+{{#if error.validation}}
+<p>{{error.validation.message}}</p>
+{{/if}}

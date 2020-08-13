@@ -1,9 +1,18 @@
-<h1>CUENTA CONFIRMADA</h1>
-{{#if message}}
-<p>{{message}}</p>
-<a href="/login">login here</a>
-{{/if}}
+<div class="banner-deg" style="background: url(/images/profile.jpg) no-repeat center center / cover;"></div>
+<div class="container-fluid content">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-8">
+        <h1>CUENTA CONFIRMADA</h1>
+        {{#if message}}
+        <p>{{message}}</p>
+        <a href="/login">login here</a>
+        {{/if}}
 
-{{#if error.validation}}
-<p>{{error.validation.message}}</p>
-{{/if}}
+        {{#if error.validation}}
+        <p>{{error.validation.message}}</p>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</div>

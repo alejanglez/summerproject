@@ -418,22 +418,31 @@ a:hover {
   font-weight: 700;
 }
 
-.content button {
+.content button,
+.content .btn-delete {
   background: #04bfbf;
   color: #fff;
   font-size: 1.6rem;
-  padding: 1rem 4rem;
+  padding: 1rem 2rem;
   margin-top: 3rem;
   border: 0;
   -webkit-transition: all 100ms ease-in-out;
   transition: all 100ms ease-in-out;
   border: solid 0.1rem #04bfbf;
   outline: none;
+  border-radius: 0.25rem;
 }
 
-.content button:hover {
+.content button:hover,
+.content .btn-delete:hover {
   background: transparent;
   color: #04bfbf;
+}
+
+.content .btn-delete {
+  background: none;
+  border: 0;
+  color: #04adbf;
 }
 
 .content .edit-row {
@@ -506,5 +515,66 @@ a:hover {
 .modal .modal-body button:hover {
   background: transparent;
   color: #04bfbf;
+}
+
+#admin .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#admin .info p {
+  margin: 0;
+}
+
+#admin button {
+  margin-top: 0;
+}
+
+#admin label {
+  display: block;
+}
+
+#admin input {
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+  width: 100%;
+}
+
+#admin #projname,
+#admin #name {
+  position: relative;
+}
+
+#admin [class*='-filter'] {
+  position: absolute;
+  right: 1.5rem;
+  background-color: #04adbf;
+  color: white;
+  padding: 0.5rem 2rem;
+  font-weight: 400;
+  font-size: 1.6rem;
+  border-radius: 0.3rem;
+  display: inline-block;
+}
+
+#admin [class*='-filter']:hover {
+  cursor: pointer;
+  background: #04bfbf;
+}
+
+#admin .graph {
+  margin-top: 10rem;
+}
+
+#admin .graph h1 {
+  font-size: 3rem;
+  margin-top: 0;
 }
 /*# sourceMappingURL=style.css.map */

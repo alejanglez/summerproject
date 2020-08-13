@@ -384,21 +384,29 @@ a {
     font-weight: 700;
   }
 
-  button {
+  button,
+  .btn-delete {
     background: $secondary-blue;
     color: $white;
     font-size: 1.6rem;
-    padding: 1rem 4rem;
+    padding: 1rem 2rem;
     margin-top: 3rem;
     border: 0;
     transition: all 100ms ease-in-out;
     border: solid 0.1rem $secondary-blue;
     outline: none;
+    border-radius: 0.25rem;
 
     &:hover {
       background: transparent;
       color: $secondary-blue;
     }
+  }
+
+  .btn-delete {
+    background: none;
+    border: 0;
+    color: $primary-blue;
   }
 
   .edit-row {
@@ -468,6 +476,63 @@ a {
         background: transparent;
         color: $secondary-blue;
       }
+    }
+  }
+}
+
+#admin {
+  .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  button {
+    margin-top: 0;
+  }
+
+  label {
+    display: block;
+  }
+
+  input {
+    padding: 0.5rem 1rem;
+    font-size: 1.4rem;
+    width: 100%;
+  }
+
+  #projname,
+  #name {
+    position: relative;
+  }
+
+  [class*='-filter'] {
+    position: absolute;
+    right: 1.5rem;
+    background-color: $primary-blue;
+    color: white;
+    padding: 0.5rem 2rem;
+    font-weight: 400;
+    font-size: 1.6rem;
+    border-radius: 0.3rem;
+    display: inline-block;
+
+    &:hover {
+      cursor: pointer;
+      background: $secondary-blue;
+    }
+  }
+
+  .graph {
+    margin-top: 10rem;
+
+    h1 {
+      font-size: 3rem;
+      margin-top: 0;
     }
   }
 }

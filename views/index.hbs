@@ -6,8 +6,10 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet nunc et dui mattis placerat. Praesent
           vel est sed nulla tristique semper a et dolor. Donec placerat, quam ut pharetra ullamcorper, metus purus
           convallis est, id mollis lorem elit id arcu. </p>
+        {{#unless user}}
         <p><strong>Want to share your projects?</strong> please sign in</p>
         <a class="btn" href="/signup">Sign in</a>
+        {{/unless}}
       </div>
       <div class="banner-deg"></div>
     </div>

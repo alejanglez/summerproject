@@ -70,6 +70,12 @@ h1.form {
   width: 100%;
 }
 
+.navbar.navbar-expand-lg .navbar-collapse {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .navbar .navbar-brand {
   font-size: 3rem;
   font-weight: 300;
@@ -481,6 +487,16 @@ a:hover {
   margin-bottom: 0;
 }
 
+.content .github {
+  border-left: solid 0.1rem #04adbf;
+  margin-left: 1.5rem;
+}
+
+.content .github svg {
+  width: 2rem;
+  margin-left: 1.5rem;
+}
+
 .modal {
   background: rgba(255, 255, 255, 0.9);
 }
@@ -639,6 +655,18 @@ a:hover {
   }
   .content .card .card-header {
     display: none;
+  }
+  #admin .info {
+    font-size: 1.2rem;
+  }
+  #admin .btn-delete {
+    padding: 0 0.5rem;
+  }
+  #admin .graph {
+    margin-top: 2rem;
+  }
+  #admin .graph [class*='col-']:last-child {
+    margin-top: 4rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

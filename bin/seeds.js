@@ -35,6 +35,7 @@ Promise.all([
           picPath: faker.random.image(),
           picName: faker.name.title(),
           url: faker.internet.url(),
+          github: faker.internet.url(),
           createdAt: faker.date.past()
         })
 

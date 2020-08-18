@@ -23,6 +23,9 @@ const projectSchema = new Schema(
     },
     url: {
       type: String
+    },
+    github: {
+      type: String
     }
   },
   {

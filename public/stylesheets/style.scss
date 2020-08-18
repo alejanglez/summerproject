@@ -75,6 +75,12 @@ h1 {
   background: rgba($white, 0.9);
   width: 100%;
 
+  &.navbar-expand-lg {
+    .navbar-collapse {
+      justify-content: flex-end;
+    }
+  }
+
   .navbar-brand {
     font-size: 3rem;
     font-weight: 300;
@@ -444,6 +450,16 @@ a {
       }
     }
   }
+
+  .github {
+    border-left: solid 0.1rem $primary-blue;
+    margin-left: 1.5rem;
+
+    svg {
+      width: 2rem;
+      margin-left: 1.5rem;
+    }
+  }
 }
 
 .modal {
@@ -610,6 +626,23 @@ a {
     .card {
       .card-header {
         display: none;
+      }
+    }
+  }
+
+  #admin {
+    .info {
+      font-size: 1.2rem;
+    }
+
+    .btn-delete {
+      padding: 0 0.5rem;
+    }
+    .graph {
+      margin-top: 2rem;
+
+      [class*='col-']:last-child {
+        margin-top: 4rem;
       }
     }
   }

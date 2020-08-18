@@ -31,7 +31,8 @@ router.post(
       picName: req.body.picName,
       // picPath: req.body.picPath
       picPath: `${process.env.CLOUDINARY_SECURE}/${req.body.picPath}`,
-      url: req.body.url
+      url: req.body.url,
+      github: req.body.github
     })
       .then(() => {
         res.redirect(`/`)
@@ -58,7 +59,8 @@ router.post(
         creatorId: req.session.currentUser._id,
         picPath: `${process.env.CLOUDINARY_SECURE}/${req.body.picPath}`,
         picName: req.body.picName,
-        url: req.body.url
+        url: req.body.url,
+        github: req.body.github
       })
         .then(() => {
           res.redirect(`/project/${id}`)
@@ -70,7 +72,8 @@ router.post(
         content: req.body.content,
         creatorId: req.session.currentUser._id,
         picName: req.body.picName,
-        url: req.body.url
+        url: req.body.url,
+        github: req.body.github
       })
         .then(() => {
           res.redirect(`/project/${id}`)

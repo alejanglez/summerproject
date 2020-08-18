@@ -124,6 +124,38 @@ router.get(
 )
 
 ////////////////////////////////////////////////////////////////////////
+/////////////////////////// USER PROJECTS //////////////////////////////
+////////////////////////////////////////////////////////////////////////
+router.get(
+  '/user-projects/:id',
+  routeGuard.isNotAuthenticated,
+  (req, res, next) => {
+    const id = req.params.id
+
+    Project.find({ creatorId: id })
+      .populate('creatorId')
+      .populate('comments')
+      .populate({
+        path: 'comments',
+        populate: {
+          path: 'authorId',
+          model: 'User'
+        }
+      })
+      .populate('likes')
+      .then((project) => {
+        // res.json(project)
+        res.render('users/user-projects', {
+          project,
+          title: `@${project[0].creatorId.username} projects`,
+          username: `${project[0].creatorId.username} `
+        })
+      })
+      .catch((error) => next(error))
+  }
+)
+
+////////////////////////////////////////////////////////////////////////
 //////////////////////// UPDATE OR DELETE USER /////////////////////////
 ////////////////////////////////////////////////////////////////////////
 

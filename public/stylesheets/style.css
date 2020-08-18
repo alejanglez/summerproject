@@ -586,4 +586,59 @@ a:hover {
   font-size: 3rem;
   margin-top: 0;
 }
+
+@media (max-width: 576px) {
+  .navbar .navbar-nav {
+    display: block;
+  }
+  .navbar .navbar-nav .user-info {
+    padding: 0.5rem 2rem;
+  }
+  .navbar .navbar-nav .user-info .nav-avatar {
+    margin-right: 2rem;
+  }
+  .navbar .navbar-nav .nav-item.home {
+    display: none;
+  }
+  .navbar .navbar-nav .nav-item.logout {
+    border: 0;
+    padding: 0.5rem 0rem;
+  }
+  .navbar .navbar-nav .nav-item.no-user {
+    padding: 0.5rem 4rem;
+  }
+  h1 {
+    font-size: 2rem;
+    margin-top: 7rem;
+  }
+  h1 strong {
+    font-size: 3rem;
+  }
+  .navbar-toggler {
+    border: 0;
+    margin-right: 1rem;
+  }
+  .banner-bg {
+    height: 50rem;
+  }
+  .user-projects.banner-bg {
+    height: 17rem;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .user-projects .banner-deg {
+    position: absolute;
+  }
+  .banner-deg {
+    opacity: 0.3;
+    z-index: -1;
+  }
+  .content .user-avatar {
+    display: inline-table;
+  }
+  .content .card .card-header {
+    display: none;
+  }
+}
 /*# sourceMappingURL=style.css.map */

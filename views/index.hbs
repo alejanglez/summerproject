@@ -1,7 +1,7 @@
 <div class="container-fluid banner-bg">
   <div class="container">
     <div class="row">
-      <div class="col-6 banner-content">
+      <div class="col-12 col-sm-6 banner-content">
         <h1>Welcome to my <br> <strong>Summer Project</strong></h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet nunc et dui mattis placerat. Praesent
           vel est sed nulla tristique semper a et dolor. Donec placerat, quam ut pharetra ullamcorper, metus purus
@@ -17,7 +17,7 @@
 </div>
 <div class="container-fluid content mt-0">
   <div class="row justify-content-center">
-    <div class="col-8">
+    <div class="col-12 col-sm-8">
       {{#unless user}}
       <div class="card-columns">
         {{#each project as |pro|}}
@@ -28,7 +28,8 @@
           <div class="card-body">
             <p class="card-subtitle mb-2 text-muted date">{{date pro.createdAt}}</p>
             <a href="/project/{{pro._id}}" class="project-name">{{pro.name}}</a>
-            <p class="author">project by <strong>@{{pro.creatorId.username}}</strong></p>
+            <p class="author">project by <strong><a
+                  href="/user-projects/{{pro.creatorId._id}}">@{{pro.creatorId.username}}</a></strong></p>
             <p class="card-text">{{pro.content}}</p>
             <!--
               {{#each comments as |com|}}
@@ -77,7 +78,8 @@
           <div class="card-body">
             <p class="card-subtitle mb-2 text-muted date">{{date pro.createdAt}}</p>
             <a href="/project/{{pro._id}}" class="project-name">{{pro.name}}</a>
-            <p class="author">project by <strong>@{{pro.creatorId.username}}</strong></p>
+            <p class="author">project by <strong><a
+                  href="/user-projects/{{pro.creatorId._id}}">@{{pro.creatorId.username}}</a></strong></p>
             <p class="card-text">{{pro.content}}</p>
             <!--
               {{#each comments as |com|}}
